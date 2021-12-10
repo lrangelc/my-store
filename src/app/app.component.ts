@@ -16,6 +16,9 @@ export class AppComponent {
     name: 'Reyna'
   }
 
+  emojis: string[] = ['😂', '🐦', '🐳', '🌮', '💚'];
+  newEmoji: string = '';
+
   toggleButton() {
     this.btnDisabled = !this.btnDisabled;
   }
@@ -32,5 +35,14 @@ export class AppComponent {
   changeName(event: Event) {
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
+  }
+
+  addEmoji() {
+    this.emojis.push(this.newEmoji);
+    this.newEmoji = '';
+  }
+
+  deleteEmoji(index:number) {
+    this.emojis.splice(index,1);
   }
 }
