@@ -7,6 +7,7 @@ import { IProduct } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  imgWidth = 10;
   name = 'Luis';
   age = 41;
   img = 'https://source.unsplash.com/random';

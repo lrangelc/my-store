@@ -1,3 +1,22 @@
+<h1>Class & Style</h1>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="person.name">
+<p class="message-error" [class.invalid]="nameInput2.invalid">El campo es requerido</p>
+<label>Nombre</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name">
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Lorem, ipsum dolor sit amet consectetur adipisicing
+  elit. Quidem amet consectetur repellendus voluptatum perspiciatis
+  vel! Vero fugit delectus placeat atque doloremque minus aperiam necessitatibus, sapiente accusantium at labore quis
+  nostrum!</p>
+<div class="styles">
+  <div>
+    <input type="text" [(ngModel)]="imgWidth">
+  </div>
+  <div>
+    <img [src]="img" [style.width.px]="imgWidth">
+  </div>
+</div>
+<hr>
+
 <h1>*ngFor Array</h1>
 <div class="products--grid">
   <div *ngFor="let product of products">
@@ -6,6 +25,7 @@
     <p>{{product.name}}</p>
   </div>
 </div>
+<hr>
 
 <h1>ngSwitch</h1>
 <input type="text" required [(ngModel)]="person.name">
