@@ -7,6 +7,11 @@ import { IProduct } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  box = {
+    width:100,
+    height:100,
+    background:'red'
+  };
   imgWidth = 10;
   name = 'Luis';
   age = 41;
