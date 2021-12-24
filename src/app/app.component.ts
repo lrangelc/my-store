@@ -7,10 +7,15 @@ import { IProduct } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  credential = {
+    name: '',
+    email: '',
+    password: ''
+  };
   box = {
-    width:100,
-    height:100,
-    background:'red'
+    width: 100,
+    height: 100,
+    background: 'red'
   };
   imgWidth = 10;
   name = 'Luis';
@@ -84,5 +89,9 @@ export class AppComponent {
 
   deleteEmoji(index: number) {
     this.emojis.splice(index, 1);
+  }
+
+  onRegister() {
+    console.log(this.credential);
   }
 }
