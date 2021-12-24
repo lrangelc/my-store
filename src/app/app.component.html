@@ -1,3 +1,17 @@
+<h1>*ngFor Array</h1>
+<div>
+  <div *ngFor="let product of products">
+    <img width="250" [src]="product.image" alt="image">
+    <h2>{{product.price}}</h2>
+    <p>{{product.name}}</p>
+  </div>
+</div>
+<h1>*ngFor Object</h1>
+<div>
+  <div *ngFor="let item of person | keyvalue">
+    {{item.key}}:{{item.value}}
+  </div>
+</div>
 <h1>*ngFor</h1>
 <input type="text" [(ngModel)]="newEmoji">
 <button (click)="addEmoji()">Add emoji</button>
